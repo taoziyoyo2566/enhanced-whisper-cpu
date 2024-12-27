@@ -1,0 +1,21 @@
+services:
+  whisper:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: whisper_transcriber
+    volumes:
+      - ./input:/app/input
+      - ./output:/app/output
+      - ./models:/app/models
+    environment:
+      - HF_HOME=/app/models
+    mem_limit: 10g
+    mem_reservation: 4g
+    cpus: 4.0
+    restart: unless-stopped  # 自动重启（除非手动停止）
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "200m"
+        max-file: "3"

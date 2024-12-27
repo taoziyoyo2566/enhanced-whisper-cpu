@@ -1,0 +1,11 @@
+faster-whisper>=0.10.0
+tqdm>=4.65.0
+numpy<2.0.0  # 固定 numpy 版本
+torch>=2.1.0
+transformers>=4.30.0
+setuptools>=69.0.3
+wheel>=0.42.0
+pyannote.audio==3.1.1  # 固定版本
+soundfile>=0.12.1
+typing-extensions>=4.8.0
+huggingface-hub>=0.19.4
