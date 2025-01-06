@@ -13,7 +13,7 @@ services:
     mem_limit: 10g
     mem_reservation: 4g
     cpus: 4.0
-    restart: unless-stopped  # 自动重启（除非手动停止）
+    restart: unless-stopped
     logging:
       driver: "json-file"
       options:
